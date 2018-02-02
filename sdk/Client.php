@@ -92,11 +92,14 @@ class Client
 
   public function add_order_reference($orderId, $orderReferences)
   {
-    return $this->api_client->execute($this->base_url . "/v1/orders/" . $orderId . "/order-references", "POST", $orderReferences);    
+    return $this->api_client->execute($this->base_url . "/v1/orders/" . $orderId . "/order-references", "POST", $orderReferences);
   }
-
   public function get_order($orderId)
   {
     return $this->api_client->execute($this->base_url . "/v1/orders/" . $orderId, "GET", null);
+  }
+  public function get_order_status($orderId)
+  {
+    return $this->api_client->execute($this->base_url . "/v1/orders/".$orderId.'/status', "GET", null);
   }
 }

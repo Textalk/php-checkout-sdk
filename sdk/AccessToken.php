@@ -15,7 +15,11 @@ use \DateTime;
 use \DateTimeZone;
 use \DateInterval;
 
-session_start();
+
+if (session_status() == PHP_SESSION_NONE)
+{
+  session_start();
+}
 
 class AccessToken
 {
@@ -61,7 +65,7 @@ class AccessToken
   }
 
   public function get_token()
-  {    
+  {
     if (!empty($_SESSION["token"]) && !empty($_SESSION["token_expiry"]) && !$this->has_expired())
     {
       return $_SESSION["token"];
@@ -100,12 +104,12 @@ class AccessToken
     if(!$response) return null;
 
     $decoded_json = json_decode($response, true);
-  
+
     if(!empty($decoded_json['error'])) return null;
 
     $_SESSION["token"] = !empty($decoded_json['access_token']) ? $decoded_json['access_token']: "";
     $_SESSION["token_expiry"] = !empty($decoded_json['expires_in']) ? $this->get_expires_at($decoded_json['expires_in']) : $this->get_date_now_utc();
-    
+
     return $_SESSION["token"];
   }
 }

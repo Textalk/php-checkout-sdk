@@ -60,7 +60,7 @@ class Client
 
   public function __construct($clientId, $clientSecret, $testMode = true)
   {
-    $this->base_url = wasa_config('base_url');
+    $this->base_url = 'https://b2b.services.wasakredit.se';
     $this->token_client = new AccessToken($clientId, $clientSecret, $testMode);
     $this->api_client = new Api($clientId, $clientSecret, $testMode);
   }

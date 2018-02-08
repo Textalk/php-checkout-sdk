@@ -33,7 +33,7 @@ class AccessToken
 
   public function __construct($client_id, $client_secret, $test_mode)
   {
-    $this->_token_url = wasa_config('access_token_url');
+    $this->_token_url = 'https://b2b.services.wasakredit.se/auth/connect/token';
     $this->client_id = $client_id;
     $this->client_secret = $client_secret;
     $this->test_mode = $test_mode;

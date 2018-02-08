@@ -12,6 +12,11 @@
       "email": "conrad.ohlsson@starrepublic.com"
     }
   ],
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  },
   "require": {},
   "require-dev": {
     "phpdocumentor/phpdocumentor": "2.*",

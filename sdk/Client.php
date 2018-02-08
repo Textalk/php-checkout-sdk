@@ -1,6 +1,6 @@
 <?php
 
-namespace Sdk;
+namespace WasaKredit\Sdk;
 /**
  * Client
  *

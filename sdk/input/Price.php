@@ -1,12 +1,12 @@
 <?php
 
-namespace Sdk\Input;
+namespace WasaKredit\Sdk\Input;
 
 require_once dirname(__FILE__).'/Payload.php';
 
 // Used for Price, VAT, Shipping
 class Price extends Payload {
-  
+
   private $_payload;
 
   public function __construct($amount = null, $currency = null)

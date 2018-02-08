@@ -9,7 +9,7 @@
  * @author     Jim Skogman <jim.skogman@starrepublic.com>
  */
 
-namespace Sdk;
+namespace WasaKredit\Sdk;
 
 use \DateTime;
 use \DateTimeZone;

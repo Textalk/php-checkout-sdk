@@ -1,9 +1,9 @@
 <?php
 
-namespace Sdk\Input;
+namespace WasaKredit\Sdk\Input;
 
 class Payload {
-  
+
   private $_payload;
 
   public function __construct() {}
@@ -16,12 +16,12 @@ class Payload {
   }
 
   public function __set($property, $value)
-  {    
+  {
     if(property_exists($this, $property)) {
       $this->$property = $value;
     }
 
-    return $this;    
-  }  
+    return $this;
+  }
 
 }

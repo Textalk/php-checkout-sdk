@@ -1,6 +1,6 @@
 <?php
 
-namespace Sdk;
+namespace WasaKredit\Sdk;
 
 /**
  * Api
@@ -27,7 +27,7 @@ class Api
   }
 
   public function execute($url, $method, $postData)
-  {    
+  {
     if(!$this->token_client->get_token()) return null;
 
     $headers = array();

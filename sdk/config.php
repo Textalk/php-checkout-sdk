@@ -1,4 +1,6 @@
 <?php
+namespace WasaKredit\Sdk;
+
 function wasa_config($key = '')
 {
     $wasa_configuration = [
